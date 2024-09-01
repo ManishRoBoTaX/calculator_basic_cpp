@@ -18,19 +18,19 @@
 #include<jni.h>
 
 extern "C" JNIEXPORT jint JNICALL
-Java_com_example_calculator_basic_MainActivity_add(JNIEnv *env, jobject, jint a, jint b){
+Java_com_example_calculator_1basic_MainActivity_add(JNIEnv *env, jobject, jint a, jint b){
     return a+b;
 }
 extern "C" JNIEXPORT jint JNICALL
-Java_com_example_calculator_basic_MainActivity_sub(JNIEnv *env, jobject, jint a, jint b){
+Java_com_example_calculator_1basic_MainActivity_sub(JNIEnv *env, jobject, jint a, jint b){
     return a-b;
 }
 extern "C" JNIEXPORT jint JNICALL
-Java_com_example_calculator_basic_MainActivity_mul(JNIEnv *env, jobject, jint a, jint b){
+Java_com_example_calculator_1basic_MainActivity_mul(JNIEnv *env, jobject, jint a, jint b){
     return a*b;
 }
 extern "C" JNIEXPORT jint JNICALL
-Java_com_example_calculator_basic_MainActivity_div(JNIEnv *env, jobject, jint a, jint b){
+Java_com_example_calculator_1basic_MainActivity_div(JNIEnv *env, jobject, jint a, jint b){
     if (b==0) return 0;
     return a/b;
 }

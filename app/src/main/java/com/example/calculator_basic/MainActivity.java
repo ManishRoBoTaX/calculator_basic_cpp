@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     static {
-        System.loadLibrary("native-lib"); //load cpp library
+        System.loadLibrary("calculator_basic"); //load cpp library
     }
 
     public native int add(int a, int b);
@@ -34,22 +34,22 @@ public class MainActivity extends AppCompatActivity {
         int a = Integer.parseInt(et1.getText().toString());
         int b = Integer.parseInt(et2.getText().toString());
 
+        //int result = a+b;
         int result = add(a,b);
-
-        et3.setText(result);
+        et3.setText(String.valueOf(result));
     }
 
     public void Sub(View v){
         EditText et1 = (EditText)findViewById(R.id.editTextNumber);
         EditText et2 = (EditText)findViewById(R.id.editTextNumber2);
-        EditText et3 = (EditText)findViewById((R.id.editTextNumber3));
+        EditText et3 = (EditText)findViewById(R.id.editTextNumber3);
 
         int a = Integer.parseInt(et1.getText().toString());
         int b = Integer.parseInt(et2.getText().toString());
 
+        //int result = a-b;
         int result = sub(a,b);
-
-        et3.setText(result);
+        et3.setText(String.valueOf(result));
     }
 
     public void Mul(View v){
@@ -60,9 +60,9 @@ public class MainActivity extends AppCompatActivity {
         int a = Integer.parseInt(et1.getText().toString());
         int b = Integer.parseInt(et2.getText().toString());
 
+        //int result = a*b;
         int result = mul(a,b);
-
-        et3.setText(result);
+        et3.setText(String.valueOf(result));
     }
 
     public void Div(View v){
@@ -73,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
         int a = Integer.parseInt(et1.getText().toString());
         int b = Integer.parseInt(et2.getText().toString());
 
+        //int result = a/b;
         int result = div(a,b);
-
-        et3.setText(result);
+        et3.setText(String.valueOf(result));
     }
 
 }
